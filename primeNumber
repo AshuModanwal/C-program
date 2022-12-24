@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num, div = 0, i = 1;
+    cout << "enter a number: ";
+    cin >> num;
+    while (i <= num)
+    {
+        if (num % i == 0)
+        {
+            div++;
+        }
+        i++;
+    }
+    if(div==2){
+        cout<<"Prime number"<<endl;
+    }
+    else{
+        cout<<"not prime number"<<endl;
+    }
+    return 0;
+}
