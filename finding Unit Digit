@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int num, power, unit, smallPower, PowerNumber,temp;
+    printf("Enter the number and Power, you want to raise to it : ");
+    scanf("%d%d", &num, &power);
+    PowerNumber = pow(num, power);
+    if (power > 4)
+    {
+        smallPower = power % 4;
+        if (smallPower == 0)
+        {
+            temp = pow(num, 4);
+            unit = temp % 10;
+        }
+        else
+        {
+            temp = pow(num, smallPower);
+            unit = temp % 10;
+        }
+    }
+    printf("The Unitery number is : %d ", unit);
+    return 0;
+}
